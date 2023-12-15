@@ -16,7 +16,7 @@ router.post("/sucursales", controller.sucursales);
 router.get("/rubros", controller.rubros);
 
 //RUTA COLABORADORES
-router.get("/colaboradores", controller.colaboradores);
+router.post("/colaboradores", controller.colaboradores);
 
 // Otras rutas, si las tienes
 
