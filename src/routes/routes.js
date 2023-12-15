@@ -14,6 +14,9 @@ router.post("/register", controller.register);
 router.post("/sucursales", controller.sucursales);
 
 router.get("/rubros", controller.rubros);
+
+// Ruta de Colaboradores
+router.post("/colaboradores", controller.colaboradores);
 // Otras rutas, si las tienes
 
 module.exports = router;
