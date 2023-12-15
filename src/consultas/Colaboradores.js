@@ -5,22 +5,24 @@ async function colaboradores(req, res) {
   const con = bd_conexion([id_empresa]);
 
   try {
-    const dataColaboradores = await new Promise((resolve, reject) => {
+    const data_colaboradores = await new Promise((resolve, reject) => {
       con.query(
-        `SELECT id_cliente, nombre_cliente FROM colaboradores 
-        WHERE status_cliente = 1 AND empresa = ? ORDER BY nombre_cliente ASC`,
+        `
+        SELECT id_cliente, nombre_cliente FROM colaboradores 
+        WHERE status_cliente = 1 AND empresa = ? ORDER BY nombre_cliente ASC
+        `,
         [empresa],
-        function (err, dataColaboradores) {
+        function (err, data_colaboradores) {
           if (err) {
             reject(err);
           } else {
-            resolve(dataColaboradores);
+            resolve(data_colaboradores);
           }
         }
       );
     });
 
-    res.status(200).json(dataColaboradores);
+    res.status(200).json(data_colaboradores);
     con.close(); // cerrar conexion
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);

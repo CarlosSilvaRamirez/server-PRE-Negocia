@@ -11,7 +11,7 @@ module.exports = {
   login,
   register,
   sucursales,
-  rubros, 
+  rubros,
   colaboradores,
   // Agrega tu función de registro al objeto exportado
   // Otras funciones del controlador, si las tienes
