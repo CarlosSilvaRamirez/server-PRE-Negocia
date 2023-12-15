@@ -21,7 +21,7 @@ async function colaboradores(req, res) {
         }
       );
     });
-
+//HOLA
     res.status(200).json(data_colaboradores);
     con.close(); // cerrar conexion
   } catch (error) {
