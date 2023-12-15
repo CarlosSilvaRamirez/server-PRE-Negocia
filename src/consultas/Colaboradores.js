@@ -12,7 +12,7 @@ async function colaboradores(req, res) {
         WHERE status_cliente = 1 AND empresa = ? ORDER BY nombre_cliente ASC
         `,
         [empresa],
-        function (err, datos_colaboradores) {
+        function (err, data_colaboradores) {
           if (err) {
             reject(err);
           } else {
